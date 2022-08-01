@@ -1,0 +1,9 @@
+aiohttp==3.7.3
+aiohttp-apispec==2.2.1
+aiohttp-jinja2==1.4.2
+aiopg==1.1.0
+alembic==1.5.2
+certifi==2020.12.5
+gino==1.0.1
+marshmallow==3.10.0
+PyYAML==5.4.1
