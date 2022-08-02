@@ -7,3 +7,4 @@ certifi==2020.12.5
 gino==1.0.1
 marshmallow==3.10.0
 PyYAML==5.4.1
+markupsafe==2.0.1 # для отсутствия import error
