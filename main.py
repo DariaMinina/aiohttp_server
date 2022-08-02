@@ -3,10 +3,15 @@ import jinja2
 import aiohttp_jinja2
 
 from app.settings import config, BASE_DIR
+from app.store.database.models import database_accessor
 
 
 def setup_config(app: web.Application):
     app["config"] = config
+
+
+def setup_accessors(app:web.Application):
+    database_accessor.setup(app)
 
 
 def setup_routes(app: web.Application) -> None:
@@ -23,6 +28,7 @@ def setup_external_libraries(app: web.Application) -> None:
 
 def setup_app(app: web.Application) -> None:
     setup_config(app)
+    setup_accessors(app)
     setup_external_libraries(app)
     setup_routes(app)
 
